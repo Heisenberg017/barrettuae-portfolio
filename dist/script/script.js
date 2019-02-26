@@ -1,5 +1,4 @@
 //Navigation Bar JS
-
 (function ($) { 
     $(function () { 
         $('nav ul li a:not(:only-child)').click(function (e) {
