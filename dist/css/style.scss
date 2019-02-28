@@ -586,3 +586,26 @@ nav {
         }
     }
 }
+
+.about__grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 4rem 0;
+    align-items: center;
+
+    .about__grid--header{
+        font-size: 4rem;
+        text-align: center;
+        letter-spacing: 1px;
+        color:color(color-accent);
+        padding: 1rem 0; 
+    }
+
+    .about__grid--description{
+        font-size:1.3rem;
+        color:color(color-accent);
+        padding: 4rem 0; 
+        line-height: 2;
+        text-align: center;
+    }
+}

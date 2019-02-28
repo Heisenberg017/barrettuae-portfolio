@@ -585,4 +585,31 @@ nav ul li ul li a {
   -webkit-transform: scale(1.08);
           transform: scale(1.08);
 }
+
+.about__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  margin: 4rem 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about__grid .about__grid--header {
+  font-size: 4rem;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.about__grid .about__grid--description {
+  font-size: 1.3rem;
+  color: #fff;
+  padding: 4rem 0;
+  line-height: 2;
+  text-align: center;
+}
 /*# sourceMappingURL=style.css.map */
