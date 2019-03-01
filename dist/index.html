@@ -7,11 +7,14 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/mq.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans:400|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons" />
+  <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 <body>
   <section class="navigation__area" id="navigation">
+
     <div class="nav-container">
       <div class="brand">
         <a href="#!">barrettuae</a>
@@ -25,29 +28,39 @@
             <a href="#">Home</a>
           </li>
           <li>
-            <a href="#">About</a>
+            <a href="#" data-scroll-goto="0">About</a>
           </li>
           <li>
-            <a href="#">Services</a>
+            <a href="#" data-scroll-goto="1">Services</a>
           </li>
           <li>
-            <a href="#!">Portfolio</a>
+            <a href="#" data-scroll-goto="2">Feature</a>
           </li>
           <li>
-            <a href="#!">Feature</a>
+            <a href="#" data-scroll-goto="3">Portfolio</a>
           </li>
           <li>
-            <a href="#!">Team</a>
+            <a href="#" data-scroll-goto="4">Team</a>
           </li>
           <li>
-            <a href="#!">Contact</a>
+            <a href="#" data-scroll-goto="5">Testimonials</a>
+          </li>
+          <li>
+            <a href="#" data-scroll-goto="6">Contact</a>
           </li>
         </ul>
       </nav>
     </div>
   </section>
 
-  <section class="section-padding about__us__area" id="about">
+  <header>
+    <div class="overlay"></div>
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+      <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+    </video>
+  </header>
+
+  <section class="section-padding about__us__area" id="about" data-scroll-index="0">
     <div class="container">
       <div class="about__grid">
         <div class="about__grid--first">
@@ -66,10 +79,8 @@
         </div>
       </div>
     </div>
-    </div>
-
   </section>
-  <section class="service__area section-padding" id="service">
+  <section class="service__area section-padding" id="service" data-scroll-index="1">
     <div class="container">
       <h1 class="section--header">Our Top Services</h1>
       <hr class="header--underline" />
@@ -131,7 +142,7 @@
     </div>
   </section>
 
-  <section class="product__feature__area section-padding" id="feature">
+  <section class="product__feature__area section-padding" id="feature" data-scroll-index="2">
     <div class="container">
       <h1 class="section--header">Our Great Product Features</h1>
       <hr class="header--underline" />
@@ -232,7 +243,15 @@
       </div>
     </div>
   </section>
-  <section class="team__member section-padding" id="team">
+
+  <section class="portfolio__area section-padding" id="portfolio" data-scroll-index="3">
+    <div class="container">
+      <h1 class="section--header"> Our Portfolio</h1>
+      <hr class="header--underline" />
+    </div>
+  </section>
+
+  <section class="team__member section-padding" id="team" data-scroll-index="4">
     <div class="container">
       <h1 class="section--header">Meet Our Talented Team</h1>
       <hr class="header--underline" />
@@ -322,8 +341,15 @@
     </div>
   </section>
 
-  <section class="contact__us__area section-padding " id="contact">
+  <section class="testimonial__area section-padding" id="testimonial" data-scroll-index="5">
+    <h1 class="section--header">Testimonial</h1>
+    <hr class="header--underline" />
+    <div class="container">
 
+    </div>
+  </section>
+
+  <section class="contact__us__area section-padding " id="contact" data-scroll-index="6">
     <div class="container">
       <h1 class="section--header">Get In Touch</h1>
       <hr class="header--underline" />
@@ -332,7 +358,6 @@
           <form action="" class="contact__form">
             <div class="contact__formGroup">
               <input type="text" required>
-
               <label>Name</label>
             </div>
             <div class="contact__formGroup">
@@ -356,12 +381,85 @@
       </div>
     </div>
   </section>
+
+  <section class="footer__area section-padding" id="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__gridOne">
+          <h1 class="footer__grid--header">Find Us</h1>
+          <div class="footer__gridOneInner">
+            <h1 class="footer__gridOneInner--header">Address</h1>
+            <p class="footer__gridOneInner--description">Business Centre<br> Dubai World Central<br>
+              P. O. Box 343146<br>
+              Dubai – UAE.</p>
+            <h1 class="footer__gridOneInner--header">Contact</h1>
+            <div class="company__contactGrid">
+              <p>+971 50 659 4071</p>
+              <p>+971 50 659 4071</p>
+              <p>+971 50 659 4071</p>
+              <p>+971 50 659 4071</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer__gridOne">
+          <h1 class="footer__grid--header">Social Links</h1>
+          <ul class="footer__gridList footer__gridOneInner">
+            <li class="footer__gridList--li"><a href=""><i class="fab fa-facebook-f footer__gridList--icon"></i></a>
+            </li>
+            <li class="footer__gridList--li"><a href=""><i class="fab fa-twitter footer__gridList--icon"></i></a> </li>
+            <li class="footer__gridList--li"><a href=""><i class="fab fa-linkedin-in footer__gridList--icon"></i></a>
+            </li>
+            <li class="footer__gridList--li"><a href=""><i class="fab fa-google-plus-g footer__gridList--icon"></i></a></li>
+            <li class="footer__gridList--li"><a href=""><i class="fab fa-instagram footer__gridList--icon"></i></a></li>
+            <li class="footer__gridList--li"><a href=""><i class="fab fa-yelp footer__gridList--icon"></i></a></li>
+          </ul>
+        </div>
+        <div class="footer__gridOne">
+          <h1 class="footer__grid--header">Subscribe To Latest News</h1>
+          <div class="footer__gridOneInner">
+            <form action="" class="subscribe__form">
+              <div class="subscribe__form--formGroup">
+                <input type="text" required>
+                <label>Your Email Address</label>
+              </div>
+              <a href="#" class="subscribe__form--btn">Send Now</a>
+            </form>
+            <div class="subscribe__detail">
+              <p>Latest news delevered to your inbox!<br>
+                Your Information will be kept confidential and No spam..
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="footer__areaSub ">
+    <div class="container">
+      <h1 class="footer__area__last">Copyright © 2019 Barret Requisites Trading DWC LLC. All rights Reserved.</h1>
+    </div>
+  </section>
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
     crossorigin="anonymous" />
   <script src="script/script.js"></script>
   <script src="script/jquery.vide.js"></script>
+  <script src="script/scrollIt.min.js"></script>
 </body>
+
+
+<!--Scroll It-->
+<script>
+  $.scrollIt({
+    upKey: 38,
+    downKey: 40,
+    easing: 'linear',
+    scrollTime: 600,
+    activeClass: 'active',
+    onPageChange: null,
+    topOffset: 0
+  });
+</script>
 
 </html>
