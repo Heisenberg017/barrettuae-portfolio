@@ -123,7 +123,6 @@ html {
 .service__card .service__card--cards {
   background-color: #fff;
   border-radius: 2px;
-  height: 350px;
 }
 
 .service__card .cards__inner img {
@@ -133,10 +132,11 @@ html {
 }
 
 .service__card .cards__inner .cards__inner--header {
-  margin: 0 2rem;
-  font-size: 24px;
+  margin: .5rem 2rem;
+  font-size: 1.5rem;
   font-weight: 900;
   color: #000;
+  text-transform: uppercase;
 }
 
 .service__card .cards__inner .cards__inner--description {
@@ -169,13 +169,14 @@ html {
           transform: scale(1.08);
 }
 
-.service__card .card {
-  height: 350px;
+.service__card .service__card--inner {
+  height: 300px;
   -webkit-perspective: 1500px;
           perspective: 1500px;
+  cursor: pointer;
 }
 
-.service__card .card .content {
+.service__card .service__card--inner .content {
   position: relative;
   width: 100%;
   height: 100%;
@@ -187,17 +188,17 @@ html {
   transition: transform 0.8s cubic-bezier(0.75, 0, 0.85, 1), -webkit-transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
 }
 
-.service__card .more {
+.service__card .service__card--inner .more {
   display: none;
 }
 
-.service__card .more:checked ~ .content {
+.service__card .service__card--inner .more:checked ~ .content {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
 
-.service__card .front,
-.service__card .back {
+.service__card .service__card--inner .front,
+.service__card .service__card--inner .back {
   position: absolute;
   top: 0;
   left: 0;
@@ -208,10 +209,11 @@ html {
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   border-radius: 6px;
+  cursor: pointer;
 }
 
-.service__card .front .inner,
-.service__card .back .inner {
+.service__card .service__card--inner .front .inner,
+.service__card .service__card--inner .back .inner {
   height: 100%;
   display: -ms-grid;
   display: grid;
@@ -220,13 +222,14 @@ html {
           transform: translateZ(80px) scale(0.94);
 }
 
-.service__card .front {
+.service__card .service__card--inner .front {
   background-color: #fff;
   background-size: cover;
   background-position: center center;
+  cursor: pointer !important;
 }
 
-.service__card .front:after {
+.service__card .service__card--inner .front:after {
   content: '';
   position: absolute;
   top: 0;
@@ -239,60 +242,31 @@ html {
           backface-visibility: hidden;
 }
 
-.service__card .back {
+.service__card .service__card--inner .back {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
   background-color: #fff;
   border: 2px solid #f0f0f0;
 }
 
-.service__card .back .inner {
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  grid-column-gap: 2rem;
+.service__card .service__card--inner .back .inner {
   justify-items: center;
 }
 
-.service__card .back .inner p {
+.service__card .service__card--inner .back .inner h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+.service__card .service__card--inner .back .inner p {
   font-size: 1rem;
+  line-height: 1.7;
   margin: 2rem 0;
+  color: #000;
   text-align: justify;
-  height: 9rem;
-}
-
-.service__card .back .info {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #355cc9;
-  -ms-grid-row: 3;
-  grid-row: 3;
-}
-
-.service__card .back .button {
-  margin: 1rem 0;
-  display: inline-block;
-  background-color: #000;
-  padding: 0.5rem 1.5rem;
-  border-radius: 100px;
-  color: #fff;
-  text-decoration: none;
-  -webkit-transition: -webkit-transform 0.5s ease;
-  transition: -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  font-size: 18px;
-}
-
-.service__card .back .button:hover {
-  -webkit-transform: scale(1.08);
-  transform: scale(1.08);
 }
 
 .company__area {
@@ -805,31 +779,7 @@ html {
 }
 
 /*Media Query*/
-@media (max-width: 100000px) and (min-width: 1000px) {
-  .header li {
-    float: left;
-  }
-  .header li a {
-    padding: 20px 30px;
-  }
-  .header .menu {
-    clear: none;
-    float: right;
-    max-height: none;
-  }
-  .header .menu-icon {
-    display: none;
-  }
-}
-
 @media only screen and (max-width: 500px) and (min-width: 100px) {
-  .logo {
-    font-size: .8rem !important;
-    padding: .5rem 1.2rem !important;
-  }
-  .header .menu-icon {
-    padding: 1rem;
-  }
   .section-padding {
     padding: 50px 0;
   }
