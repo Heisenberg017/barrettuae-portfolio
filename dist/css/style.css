@@ -1,17 +1,3 @@
-/*
- Theme Name:   Black and White
- Theme URI:    http://sudopower.com
- Description:  Black and White Theme fo Barrettuae.Com
- Author:       Kiran Nambiar, Suyash Pradhan
- Author URI:   http://sudopower.com
- Template:     twentyseventeen
- Version:      1.0.0
- License:      GNU General Public License v2 or later
- License URI:  http://www.gnu.org/licenses/gpl-2.0.html
- Tags:         black,white,elegant
- Text Domain:  twenty-seventeen-child
-*/
-/*@import url("https://fonts.googleapis.com/css?family=Ubuntu");*/
 * {
   margin: 0;
   padding: 0;
@@ -33,254 +19,58 @@ html {
   margin: auto;
 }
 
-.header--underline {
-  width: 60px;
-  height: 4px;
-  background-color: #fff;
-  display: block;
-  margin: 0.5rem auto;
+.carousel-item {
+  height: 100vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  background-size: cover;
 }
 
 .section--header {
-  font-size: 32px;
+  font-size: 1.8rem;
   color: #fff;
-  text-align: center;
+  text-align: left;
   font-weight: 700;
   letter-spacing: 1px;
   position: relative;
   padding: 0.5rem 0;
 }
 
+.section--header::before {
+  content: '.';
+  font-size: 11rem;
+}
+
 .html.sr .load-hidden {
   visibility: hidden;
 }
 
-.navigation__area {
-  height: 4rem;
-  background: #020202;
-  position: fixed;
-  width: 100% !important;
-  z-index: 2;
-}
-
-.header {
-  background: #020202;
-}
-
-.header ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow: hidden;
-}
-
-.header li a {
-  display: block;
-  padding: 1.5rem;
-  color: #fff;
-  text-decoration: none;
-  -webkit-transition: -webkit-transform .5s ease in;
-  transition: -webkit-transform .5s ease in;
-  transition: transform .5s ease in;
-  transition: transform .5s ease in, -webkit-transform .5s ease in;
-  font-family: AGBookPro;
-}
-
-.header li a a:visited {
-  outline: none;
-  border: none;
-}
-
-.header li a:focus {
+.navbar-light .navbar-toggler-icon {
+  background-image: url(../images/menu.png);
   outline: none;
 }
 
-.header li a:hover,
-.header .menu-btn:hover {
-  background-color: #fff;
-  color: #000;
+.navbar-light .navbar-toggler-icon:active {
+  outline: none;
 }
 
-.header .logo {
-  display: block;
-  float: left;
-  font-size: 2rem;
-  text-transform: uppercase;
-  color: #fff;
-  padding: .5rem 3rem;
-  text-decoration: none;
+.navbar {
+  background-color: #020202;
 }
 
-.header .menu {
-  clear: both;
-  max-height: 0;
-  -webkit-transition: max-height .2s ease-out;
-  transition: max-height .2s ease-out;
-  
+.navbar .navbar-brand {
+  color: #fff !important;
+  font-weight: 700;
 }
 
-.header .menu-icon {
-  cursor: pointer;
-  display: inline-block;
-  float: right;
-  padding: 28px 20px;
-  position: relative;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+.navbar .nav-link {
+  color: #fff !important;
+  font-weight: 700;
+  outline: none;
 }
 
-.header .menu-icon .navicon {
-  background-color: #fff;
-  display: block;
-  height: 2px;
-  position: relative;
-  -webkit-transition: background-color .2s ease-out;
-  transition: background-color .2s ease-out;
-  width: 18px;
-}
-
-.header .menu-icon .navicon:before,
-.header .menu-icon .navicon:after {
-  background-color: #fff;
-  content: '';
-  display: block;
-  height: 100%;
-  position: absolute;
-  -webkit-transition: all .2s ease-out;
-  transition: all .2s ease-out;
-  width: 100%;
-}
-
-.header .menu-icon .navicon:before {
-  top: 5px;
-}
-
-.header .menu-icon .navicon:after {
-  top: -5px;
-}
-
-.header .menu-btn {
-  display: none;
-}
-
-.header .menu-btn:checked ~ .menu {
-  min-height: 40rem;
-  position: relative;
-  z-index: 99999;
-  background-color: #000;
-}
-
-.header .menu-btn:checked ~ .menu-icon .navicon {
-  background: transparent;
-}
-
-.header .menu-btn:checked ~ .menu-icon .navicon:before {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-
-.header .menu-btn:checked ~ .menu-icon .navicon:after {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
-  top: 0;
-}
-
-.banner__area {
-  position: relative;
-  z-index: 1;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-}
-
-.banner__area::after {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
-  content: '';
-  background: #020202;
-  opacity: .8;
-  z-index: -1;
-}
-
-.banner__area .banner__areaInner video {
-  margin: auto;
-  position: absolute;
-  z-index: -1;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  visibility: visible;
-  opacity: 1;
-  width: 100vw;
-  height: auto;
-}
-
-.banner__area .banner__areaDescription {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  height: 100vh;
-  width: 50vw;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-}
-
-.banner__area .banner__areaDescription h1 {
-  font-size: 3rem;
-  text-align: left;
-  color: #fff;
-  padding: 0 0 2rem 0;
-  margin: 0;
-  font-family: AGBookProLight;
-}
-
-.banner__area .banner__areaDescription h1 span {
-  display: block;
-  font-family: AGBookProLight;
-}
-
-.banner__area .banner__areaDescription p {
-  font-size: 1.1rem;
-  color: #fff;
-  line-height: 2;
-  text-align: justify;
-  font-family: AGBookProLight;
-}
-
-.banner__area .banner__areaDescription .banner__btn {
-  background-color: #fff;
-  padding: 1rem 3rem;
-  margin: 2.5rem 0;
-  color: #000;
-  text-decoration: none;
-  font-size: 1rem;
-  border-radius: 100px;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
-  font-family: AGBookProLight;
-}
-
-.banner__area .banner__areaDescription .banner__btn:hover {
-  -webkit-transform: scale(1.08);
-          transform: scale(1.08);
+.navbar .nav-link:active {
+  outline: none;
 }
 
 .about__grid {
@@ -295,7 +85,7 @@ html {
 }
 
 .about__grid .about__grid--header {
-  font-size: 4.6rem;
+  font-size: 2rem;
   text-align: left;
   letter-spacing: 1px;
   color: #fff;
@@ -359,7 +149,7 @@ html {
 }
 
 .service__card .cards__inner .cards__inner--link {
-  margin: 3rem 2rem;
+  margin: 2rem;
   display: inline-block;
   background-color: #000;
   padding: 0.4rem 1.5rem;
@@ -379,9 +169,130 @@ html {
           transform: scale(1.08);
 }
 
-.service__card .cards__inner .cards__icons {
+.service__card .card {
+  height: 350px;
+  -webkit-perspective: 1500px;
+          perspective: 1500px;
+}
+
+.service__card .card .content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
+  transition: -webkit-transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
+  transition: transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
+  transition: transform 0.8s cubic-bezier(0.75, 0, 0.85, 1), -webkit-transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
+}
+
+.service__card .more {
+  display: none;
+}
+
+.service__card .more:checked ~ .content {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.service__card .front,
+.service__card .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  border-radius: 6px;
+}
+
+.service__card .front .inner,
+.service__card .back .inner {
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  padding: 1em;
+  -webkit-transform: translateZ(80px) scale(0.94);
+          transform: translateZ(80px) scale(0.94);
+}
+
+.service__card .front {
+  background-color: #fff;
+  background-size: cover;
+  background-position: center center;
+}
+
+.service__card .front:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 6px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.service__card .back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  background-color: #fff;
+  border: 2px solid #f0f0f0;
+}
+
+.service__card .back .inner {
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-column-gap: 2rem;
+  justify-items: center;
+}
+
+.service__card .back .inner p {
+  font-size: 1rem;
+  margin: 2rem 0;
+  text-align: justify;
+  height: 9rem;
+}
+
+.service__card .back .info {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #355cc9;
+  -ms-grid-row: 3;
+  grid-row: 3;
+}
+
+.service__card .back .button {
+  margin: 1rem 0;
+  display: inline-block;
+  background-color: #000;
+  padding: 0.5rem 1.5rem;
+  border-radius: 100px;
   color: #fff;
-  padding-left: 0.2rem;
+  text-decoration: none;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  font-size: 18px;
+}
+
+.service__card .back .button:hover {
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
 }
 
 .company__area {
@@ -622,21 +533,14 @@ html {
 .testimonial__wrap p {
   color: #fff;
   font-size: 1.3rem;
-  text-align: center;
+  text-align: left;
   line-height: 1.8;
   margin: 0;
   padding: 0 0 4rem 0;
 }
 
-.testimonial__wrap img {
-  display: block;
-  margin: 0 auto;
-  height: 120px;
-  width: auto !important;
-}
-
 .testimonial__wrap h1 {
-  text-align: center;
+  text-align: left;
   color: #fff;
   font-size: 1.5rem;
   padding: .5rem 0 0 0;
@@ -644,10 +548,10 @@ html {
 }
 
 .testimonial__wrap h2 {
-  text-align: center;
+  text-align: left;
   color: #fff;
-  font-size: 1rem;
-  padding: 0;
+  font-size: 1.5rem;
+  padding: .5rem 0 0 0;
   margin: 0;
 }
 
@@ -1131,30 +1035,4 @@ html {
     font-size: 1rem !important;
   }
 }
-
-
-.grid-container-portfolio-home {
-  padding-top: 1em;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-gap:1em;
-  grid-template-areas: "main-img main-img sec-img-1 sec-img-2" "main-img main-img sec-img-3 sec-img-4";
-  
-}
-
-.main-img { grid-area: main-img;background-position:center; background-size: cover;width: 100%;height:50vh; }
-
-.sec-img-1 { grid-area: sec-img-1;background-position:center;background-size: cover; }
-
-.sec-img-2 { grid-area: sec-img-2;background-position:center;background-size: cover; }
-
-.sec-img-3 { grid-area: sec-img-3;background-position:center;background-size: cover; }
-
-.sec-img-4 { grid-area: sec-img-4;background-position:center;background-size: cover; }
 /*# sourceMappingURL=style.css.map */
-
-/* SPLASH PAGE CSS*/
-.age-gate-subheading{
-  font-family:AGBookProLight;
-}
