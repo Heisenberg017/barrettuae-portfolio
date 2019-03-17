@@ -1,10 +1,23 @@
-@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+/*
+ Theme Name:   Black and White
+ Theme URI:    http://sudopower.com
+ Description:  Black and White Theme fo Barrettuae.Com
+ Author:       Kiran Nambiar, Suyash Pradhan
+ Author URI:   http://sudopower.com
+ Template:     twentyseventeen
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         black,white,elegant
+ Text Domain:  twenty-seventeen-child
+*/
+/*@import url("https://fonts.googleapis.com/css?family=Ubuntu");*/
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Ubuntu", sans-serif;
+  font-family: AGBookProLight;
 }
 
 body,
@@ -70,6 +83,7 @@ html {
   transition: -webkit-transform .5s ease in;
   transition: transform .5s ease in;
   transition: transform .5s ease in, -webkit-transform .5s ease in;
+  font-family: AGBookPro;
 }
 
 .header li a a:visited {
@@ -102,6 +116,7 @@ html {
   max-height: 0;
   -webkit-transition: max-height .2s ease-out;
   transition: max-height .2s ease-out;
+  
 }
 
 .header .menu-icon {
@@ -234,10 +249,12 @@ html {
   color: #fff;
   padding: 0 0 2rem 0;
   margin: 0;
+  font-family: AGBookProLight;
 }
 
 .banner__area .banner__areaDescription h1 span {
   display: block;
+  font-family: AGBookProLight;
 }
 
 .banner__area .banner__areaDescription p {
@@ -245,6 +262,7 @@ html {
   color: #fff;
   line-height: 2;
   text-align: justify;
+  font-family: AGBookProLight;
 }
 
 .banner__area .banner__areaDescription .banner__btn {
@@ -257,6 +275,7 @@ html {
   border-radius: 100px;
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
+  font-family: AGBookProLight;
 }
 
 .banner__area .banner__areaDescription .banner__btn:hover {
@@ -1112,4 +1131,30 @@ html {
     font-size: 1rem !important;
   }
 }
+
+
+.grid-container-portfolio-home {
+  padding-top: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap:1em;
+  grid-template-areas: "main-img main-img sec-img-1 sec-img-2" "main-img main-img sec-img-3 sec-img-4";
+  
+}
+
+.main-img { grid-area: main-img;background-position:center; background-size: cover;width: 100%;height:50vh; }
+
+.sec-img-1 { grid-area: sec-img-1;background-position:center;background-size: cover; }
+
+.sec-img-2 { grid-area: sec-img-2;background-position:center;background-size: cover; }
+
+.sec-img-3 { grid-area: sec-img-3;background-position:center;background-size: cover; }
+
+.sec-img-4 { grid-area: sec-img-4;background-position:center;background-size: cover; }
 /*# sourceMappingURL=style.css.map */
+
+/* SPLASH PAGE CSS*/
+.age-gate-subheading{
+  font-family:AGBookProLight;
+}
