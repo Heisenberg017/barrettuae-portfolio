@@ -63,6 +63,12 @@ html {
   font-weight: 700;
 }
 
+.navbar .navbar-brand img {
+  height: 2.9rem;
+  margin: 0;
+  padding: 0;
+}
+
 .navbar .nav-link {
   color: #fff !important;
   font-weight: 700;
@@ -443,6 +449,7 @@ html {
   opacity: 0;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  border-radius: 50%;
 }
 
 .team__member .team__grid .team-details {
@@ -450,7 +457,7 @@ html {
   position: absolute;
   top: 50%;
   left: 0;
-  padding: 5%;
+  padding: 1rem;
   overflow: hidden;
   width: 100%;
   z-index: 2;

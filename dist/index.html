@@ -20,7 +20,9 @@
   <!-- Navigation Section -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">BarrettUae</a>
+      <a class="navbar-brand" href="#">
+        <img src="images/cropped-logo.png" alt="" >
+      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -28,28 +30,33 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#" data-scroll-goto="0">KNOW US.
-            </a>
+            <a class="nav-link" href="#" data-scroll-goto="0">KNOW US</a>
           </li>
+          <li id="ku-li" class="cust-li-img-filled"></li>
           <li class="nav-item">
-            <a class="nav-link" href="#" data-scroll-goto="1">WHO WE ARE.</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" data-scroll-goto="2">EXPERTISE.</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" data-scroll-goto="3">OUR WORK.</a>
-          </li>
+            <a class="nav-link" href="#" data-scroll-goto="1">WHO WE ARE</a></li>
+          <li id="wwa-li" class="cust-li-img"></li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#" data-scroll-goto="4">TEAM.</a>
-          </li>
+            <a class="nav-link" href="#" data-scroll-goto="2">EXPERTISE</a></li>
+          <li id="e-li" class="cust-li-img"></li>
+
           <li class="nav-item">
-            <a class="nav-link" href="#" data-scroll-goto="5">TESTIMONIALS.</a>
-          </li>
+            <a class="nav-link" href="#" data-scroll-goto="3">OUR WORK</a></li>
+          <li id="ow-li" class="cust-li-img"></li>
+
           <li class="nav-item">
-            <a class="nav-link" href="#" data-scroll-goto="6">CONTACT US.</a>
-          </li>
+            <a class="nav-link" href="#" data-scroll-goto="4">TEAM</a></li>
+          <li id="t-li" class="cust-li-img"></li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-scroll-goto="5">TESTIMONIALS</a></li>
+          <li id="t-li" class="cust-li-img"></li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-scroll-goto="6">CONTACT US</a></li>
+          <li id="cu-li" class="cust-li-img"></li>
+
         </ul>
       </div>
     </div>
@@ -364,7 +371,7 @@
         </div>
       </div>
     </div>
-  </section> 
+  </section>
 
   <!--Portfolio Section-->
   <section class="portfolio__area section-padding" id="portfolio" data-scroll-index="3">
@@ -379,7 +386,7 @@
       <div class="team__grid">
         <div class="team-member">
           <div class="team-img">
-            <img src="http://deothemes.com/envato/enigma/html/img/team_1.jpg" alt="" />
+            <img src="images/testimonial_1.png" alt="" />
             <div class="overlay">
               <div class="team-details">
                 <p>
@@ -400,7 +407,7 @@
         </div>
         <div class="team-member">
           <div class="team-img">
-            <img src="http://deothemes.com/envato/enigma/html/img/team_1.jpg" alt="" />
+            <img src="images/testimonial_2.png" alt="" />
             <div class="overlay">
               <div class="team-details">
                 <p>
@@ -421,7 +428,7 @@
         </div>
         <div class="team-member">
           <div class="team-img">
-            <img src="http://deothemes.com/envato/enigma/html/img/team_1.jpg" alt="" />
+            <img src="images/testimonial_3.png" alt="" />
             <div class="overlay">
               <div class="team-details">
                 <p>
@@ -442,7 +449,7 @@
         </div>
         <div class="team-member">
           <div class="team-img">
-            <img src="http://deothemes.com/envato/enigma/html/img/team_1.jpg" alt="" />
+            <img src="images/testimonial_4.png" alt="" />
             <div class="overlay">
               <div class="team-details">
                 <p>
@@ -677,5 +684,18 @@
   });
 </script>
 
+<script>
+  $('.nav-item').click(function(){   
+    $('.cust-li-img-filled').removeClass('cust-li-img-filled').addClass('cust-li-img');
+    $(this).next().addClass('cust-li-img-filled').removeClass('cust-li-img');
+  });
+  $('.navbar-brand').click(function(){
+    $('.cust-li-img-filled').removeClass('cust-li-img-filled').addClass('cust-li-img');
+  });
 
+  $('#about').focusin(function(){
+    $('.cust-li-img-filled').removeClass('cust-li-img-filled').addClass('cust-li-img');
+    $('#ku-li').addClass('cust-li-img-filled').removeClass('cust-li-img');
+  });
+</script>
 </html>
