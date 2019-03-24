@@ -34,6 +34,11 @@ html {
     margin: auto;
 }
 
+.container_boxes {
+    max-width: 95rem;
+    margin: auto;
+}
+
 .carousel-item {
     height: 100vh;
     min-height: 350px;
@@ -98,6 +103,27 @@ html {
     }
 }
 
+//Header Section
+.info__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    grid-gap: 3rem;
+    height: 10vh;
+
+    h1 {
+        color: color(color-accent);
+        font-size: 2rem;
+
+        &::after {
+            content: '.';
+            font-size: 4rem;
+        }
+
+    }
+}
+
 //About Section
 .about__grid {
     display: grid;
@@ -122,6 +148,34 @@ html {
     }
 }
 
+.box {
+    position: relative;
+
+    .box__big {
+        border: 1px solid color(color-accent);
+        height: 7rem;
+        width: 7rem;
+        display: inline-block;
+    }
+
+    .box__small {
+        border: 1px solid color(color-accent);
+        height: 4rem;
+        width: 4rem;
+        bottom: 0;
+        margin: -11.4rem 0 4rem 7rem !important;
+    }
+
+    .box__white {
+        border: 1px solid color(color-accent);
+        height: 2rem;
+        width: 2rem;
+        background-color: color(color-accent);
+        margin: -4rem 0 4rem 11rem !important;
+
+    }
+}
+
 //Service Section
 .service__area {
     background-color: color(color-secondary);
@@ -140,7 +194,6 @@ html {
 
     .service__card--cards {
         background-color: color(color-accent);
-        border-radius: 2px;
     }
 
     .cards__inner {
@@ -172,7 +225,6 @@ html {
             display: inline-block;
             background-color: color(color-primary);
             padding: 0.4rem 1.5rem;
-            border-radius: 100px;
             color: color(color-accent);
             text-decoration: none;
             transition: transform 0.5s ease;
@@ -201,7 +253,7 @@ html {
             display: none;
         }
 
-        .more:checked ~ .content {
+        .more:checked~.content {
             transform: rotateY(180deg);
         }
 
@@ -214,7 +266,6 @@ html {
             height: 100%;
             backface-visibility: hidden;
             transform-style: preserve-3d;
-            border-radius: 6px;
             cursor: pointer;
         }
 
@@ -344,11 +395,10 @@ html {
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 2rem;
         align-items: center;
-        margin: 4rem 0;
+        margin: 4rem 0 -2.8rem .2rem;
 
         .grid__common {
             background-color: color(color-accent);
-            border-radius: 3px;
             margin-bottom: 3rem;
 
             img {
@@ -384,6 +434,43 @@ html {
         }
     }
 }
+
+//Our Work
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1rem;
+    grid-template-areas: "banner banner thumb-1 thumb-2""banner banner thumb-3 thumb-4";
+    height: 55vh;
+    margin-left: .2rem;
+}
+
+.grid-container>div {
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+.banner {
+    grid-area: banner;
+}
+
+.thumb-1 {
+    grid-area: thumb-1;
+}
+
+.thumb-2 {
+    grid-area: thumb-2;
+}
+
+.thumb-3 {
+    grid-area: thumb-3;
+}
+
+.thumb-4 {
+    grid-area: thumb-4;
+}
+
 
 //Team Section
 .team__member {
@@ -501,6 +588,9 @@ html {
     }
 }
 
+
+
+
 //Testimonial Section
 .testimonial__wrap {
     margin: 4rem 0;
@@ -576,8 +666,8 @@ html {
             -webkit-transition: 0.2s ease all;
         }
 
-        input:focus ~ label,
-        input:valid ~ label {
+        input:focus~label,
+        input:valid~label {
             top: -20px;
             font-size: 0.9rem;
         }
@@ -710,8 +800,8 @@ html {
             -webkit-transition: 0.2s ease all;
         }
 
-        input:focus ~ label,
-        input:valid ~ label {
+        input:focus~label,
+        input:valid~label {
             top: -20px;
             font-size: 0.9rem;
         }
@@ -764,6 +854,16 @@ html {
         padding-left: 15px;
         margin-right: auto;
         margin-left: auto;
+    }
+
+    .mobile-hide{
+        display: none !important;
+    }
+
+    .info__wrapper {
+        display: grid;
+        grid-template-columns: 1fr !important;
+        margin: 0 0 5rem 0 !important;
     }
 
     .about__grid--header {
@@ -834,6 +934,18 @@ html {
         margin-right: auto;
         margin-left: auto;
     }
+
+    .mobile-hide{
+        display: none !important;
+    }
+
+
+    .info__wrapper {
+        display: grid;
+        grid-template-columns: 1fr !important;
+        margin: 0 0 5rem 0 !important;
+    }
+
 
     .about__grid--header {
         font-size: 2.2rem !important;
